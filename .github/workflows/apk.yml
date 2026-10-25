@@ -12,7 +12,7 @@ jobs:
       - name: Capacitor
         run: |
           npm init -y
-          npm i @capacitor/core @capacitor/cli @capacitor/android
+          npm i @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
           npx cap init YoriGram com.yori.gram --web-dir=docs
           npx cap add android
           sed -i 's#<application#<uses-permission android:name="android.permission.INTERNET"/><uses-permission android:name="android.permission.RECORD_AUDIO"/><uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/><application#' android/app/src/main/AndroidManifest.xml
